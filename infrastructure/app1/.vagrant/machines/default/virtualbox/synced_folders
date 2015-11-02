@@ -1,1 +1,0 @@
-{"virtualbox":{"/vagrant":{"guestpath":"/vagrant","hostpath":"/home/gokul/gits/demo001/infrastructure/app1","disabled":false},"v-csc-3ac22423e":{"id":"v-csc-3ac22423e","guestpath":"/tmp/vagrant-chef/1160f4a8ff41c2c75be5960b4bcaba45/cookbooks","hostpath":"/home/gokul/gits/demo001/configuration","disabled":false}}}

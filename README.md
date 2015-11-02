@@ -9,8 +9,8 @@ The scope of this project is to demonstrate the automation of deploying an infra
 **Assumptions**:  
 
 This exercise has been done with the following assumptions:  
-1. The code will be used in a Ubuntu virtual server environment.  
-2. It is assumed that the system used to test / evaluate this code will have Ruby and other associated tools defined in Pre-Requisites section installed in it.   
+1. The code will be used in a **Ubuntu virtual server** environment.  
+2. It is assumed that the system used to test / evaluate this code will have **Ruby** and other associated tools defined in Pre-Requisites section installed in it.   
 
 **Pre-Requisites**:  
 1. git  

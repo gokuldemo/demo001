@@ -75,10 +75,8 @@ Vagrant.configure(2) do |config|
 
  # Adding chef_zero provisioner
   config.vm.provision "chef_zero" do |chef|
-    chef.cookbooks_path = "#{File.dirname(__FILE__)}/../../configuration/cookbooks"
-    chef.data_bags_path = "#{File.dirname(__FILE__)}/../../configuration/data_bags"
-    chef.roles_path = "#{File.dirname(__FILE__)}/../../configuration/roles"
-  # Adding recipes
+    chef.cookbooks_path = "#{File.dirname(__FILE__)}/../../configuration"
+      # Adding recipes
     chef.add_recipe "role-app-go"
   # Adding role
   #  chef.add_role ""

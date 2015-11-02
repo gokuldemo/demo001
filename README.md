@@ -1,6 +1,6 @@
- demo001   
-To showcase devops fluency  
-To record the start time of the project - The TIME is 18:34 GMT!!  
+\# demo001   
+\##To showcase devops fluency  
+\### To record the start time of the project - The TIME is 18:34 GMT!!  
 
 **Scope**:  
 
@@ -30,4 +30,8 @@ This exercise has been done with the following assumptions:
        **./wrapper.sh destroy** - Will destroy the infrastructure and configuration that were created to execute this project.  
        **./wrapper.sh test** - Will deploy and run the test cases defined in the test framework.   
 
-Notes:
+**Notes:**    
+1. Considering the time factor to complete the given assignment, simple wrapper was written. Could have used better task management tools like rake which will give additional functionalities like guard, foodcritic, etc.,   
+2. Everything could have been converged in a single Gemfile which could have been invoked using a single command (to achieve the least hazzle way) but it was not done for 2 reasons:  
+    2.a. Virtual Box and Vagrant could not be installed using Gem  
+    2.b. Libraries used in Gem could conflict with the ones installed on the system as a part of other installations like rvm, apt, etc.,

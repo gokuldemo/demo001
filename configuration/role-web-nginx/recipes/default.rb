@@ -4,6 +4,7 @@
 #
 # Copyright (c) 2015 The Authors, All Rights Reserved.
 include_recipe 'nginx'
+
 template 'nginx.conf' do
   path   "#{node['nginx']['dir']}/nginx.conf"
   source 'nginx.conf.erb'

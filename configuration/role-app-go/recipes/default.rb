@@ -7,7 +7,9 @@ include_recipe 'apt'
 apt_package 'gccgo-go' do
   action :install
 end
+
 folds = ['/opt/go/bin', '/opt/go/src/goapp']
+
 for fold in folds
   directory fold do
     owner 'root'
@@ -17,6 +19,7 @@ for fold in folds
     recursive true
   end
 end
+
 cookbook_file '/opt/go/src/goapp/goapp.go' do
   source 'goapp.go'
   owner 'root'
@@ -25,10 +28,11 @@ cookbook_file '/opt/go/src/goapp/goapp.go' do
   action :create
   notifies :run, 'execute[goapp]', :immediately
 end
+
 execute 'goapp' do
   command 'go build -o /opt/go/bin/goapp /opt/go/src/goapp/goapp.go'
-#  notifies :restart, 'service[goapp]', :immediately
 end
+
 cookbook_file '/etc/init/goapp.conf' do
   source 'goapp.conf'
   owner 'root'
@@ -36,9 +40,11 @@ cookbook_file '/etc/init/goapp.conf' do
   mode '0755'
   action :create
 end
+
 link '/etc/init.d/goapp' do
   to '/etc/init/goapp.conf'
 end
+
 service 'goapp' do
   action [:enable, :start]
 end
